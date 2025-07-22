@@ -158,14 +158,12 @@ function setupEventListeners() {
     // Corrigir botão mobile: adicionar touchstart
     const startBtn = document.querySelector('.primary-cosmic');
     if (startBtn) {
-        startBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+        startBtn.addEventListener('click', function() {
             startQuiz();
         });
-        startBtn.addEventListener('touchstart', function(e) {
-            e.preventDefault();
+        startBtn.addEventListener('touchstart', function() {
             startQuiz();
-        }, {passive: false});
+        }, {passive: true});
     }
 
     // Scroll animations
